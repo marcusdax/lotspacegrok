@@ -1,0 +1,140 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-canvas: #f5f2eb;
+  --color-surface: #faf9f4;
+  --color-recessed: #ede7da;
+  --color-hover: #e4dece;
+  --color-ink: #221e1b;
+  --color-ink-soft: #58514b;
+  --color-navy: #1a2332;
+  --color-oxblood: #74362f;
+  --color-oxblood-deep: #5e2b25;
+  --color-oxblood-tint: #f2e3e0;
+  --color-brass: #947642;
+  --color-brass-text: #6e572c;
+  --color-brass-tint: #f0e6cc;
+  --color-sage: #4f6958;
+  --color-sage-deep: #3e5546;
+  --color-sage-tint: #e4ebe4;
+  --color-danger: #962c2c;
+  --color-danger-tint: #f5e0de;
+  --color-hairline: #d9d3c9;
+  --color-rule: #b9ae97;
+  --color-muted: #8a8272;
+  --color-paper: #faf9f4;
+  --color-inverse: #f5f2eb;
+
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-sans: "Archivo", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+
+  --shadow-plate:
+    0 0 0 1px rgb(34 30 27 / 0.08),
+    0 1px 2px -1px rgb(34 30 27 / 0.08),
+    0 2px 6px -2px rgb(34 30 27 / 0.06);
+  --shadow-plate-hover:
+    0 0 0 1px rgb(34 30 27 / 0.12),
+    0 4px 10px -2px rgb(34 30 27 / 0.1),
+    0 10px 20px -8px rgb(34 30 27 / 0.08);
+  --shadow-navy:
+    0 8px 24px -8px rgb(26 35 50 / 0.45);
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  body {
+    background-image:
+      radial-gradient(1200px 500px at 12% -10%, rgb(116 54 47 / 0.05), transparent 50%),
+      radial-gradient(900px 400px at 110% 0%, rgb(148 118 66 / 0.07), transparent 45%);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-oxblood);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--color-oxblood-tint);
+    color: var(--color-ink);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+  .overline-label {
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-brass-text);
+  }
+  .plate {
+    background: var(--color-surface);
+    box-shadow: var(--shadow-plate);
+  }
+  .plate-hover {
+    transition: box-shadow 150ms cubic-bezier(0.22, 1, 0.36, 1), transform 150ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .plate-hover:hover {
+    box-shadow: var(--shadow-plate-hover);
+  }
+  .hairline {
+    box-shadow: 0 0 0 1px var(--color-hairline);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

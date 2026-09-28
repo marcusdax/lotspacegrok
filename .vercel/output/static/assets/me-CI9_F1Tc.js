@@ -1,0 +1,1 @@
+import{g as e,u as t}from"./catalog-D4fOuY--.js";import{t as n}from"./useNavigate-Dxbgp1jX.js";import{n as r}from"./store-D4zXNG0Y.js";var i=e();function a(){let e=r(),a=t(e.spaceId);return a?(0,i.jsx)(n,{to:`/space/$slug`,params:{slug:a.slug}}):(0,i.jsx)(`p`,{children:`Space missing.`})}export{a as component};

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "LotSpace",
+      "hasCanvas": false,
+      "bodyTextLen": 2402,
+      "bodyTextHash": "dab6efcd9a3c4a462fd027bf1b678ebe7a14e77748e0b5b95075e3c652c4ab59",
+      "bodyTextPrefix": "Skip to content LotSpace Compass Market Stories Following My Spa",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "LotSpace",
+      "hasCanvas": false,
+      "bodyTextLen": 2352,
+      "bodyTextHash": "1a9c16ea877b4a4054462766f575ede863054ed1be8b899fccf98e228c3e4d43",
+      "bodyTextPrefix": "Skip to content LotSpace FOLIO 01 — ENTER THE LOT Every farm a S",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
